@@ -9,7 +9,7 @@ document.getElementById('checkButton').addEventListener('click', function() {
     }
 
     // When2Meet 데이터 가져오기
-    fetch(url)
+    fetch(url,{ mode: 'no-cors' })
         .then(response => {
             if (!response.ok) {
                 throw new Error('네트워크 응답이 좋지 않습니다.');
